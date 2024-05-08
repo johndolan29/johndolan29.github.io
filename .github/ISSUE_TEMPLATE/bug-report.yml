@@ -10,35 +10,18 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Describe your issue
-      placeholder: When I click here this happens
+      label: Describe the issue
+      placeholder: I get an error when I try to do X
     validations:
       required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      placeholder: |
-        1. Go to page X
-        2. Click here
-        3. Click there
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: What was the expected result?
-      placeholder: I expected this to happen
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Put here any screenshots or videos (optional)
   - type: dropdown
-    id: assign
+    id: priority
     attributes:
-      label: "Would you like to work on this issue?"
+      label: "Priority"
       options:
-        - "Yes"
+        - "Low"
+        - "Medium"
+        - "High"
   - type: markdown
     attributes:
       value: |
