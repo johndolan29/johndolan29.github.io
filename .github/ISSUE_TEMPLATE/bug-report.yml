@@ -22,6 +22,8 @@ body:
         - "Low"
         - "Medium"
         - "High"
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
