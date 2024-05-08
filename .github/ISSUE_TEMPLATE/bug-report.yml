@@ -2,7 +2,7 @@ name: Bug Report
 description: Report a bug
 title: "[Bug]: "
 labels: ["bug"]
-projects: ["Test project"]
+projects: ["Test project1"]
 body:
   - type: markdown
     attributes:
