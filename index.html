@@ -12,6 +12,18 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		const startYear = 2015;
+		function wholeYearsSinceYear(year) {
+			return new Date().getFullYear() - Number(year);
+		}
+		const years = wholeYearsSinceYear(startYear);
+		const plural = years === 1 ? '' : 's';
+		const el = document.getElementById('years-experience');
+		if (el) el.textContent = `${years} year${plural}`;
+		});
+	</script>
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -57,17 +69,31 @@
 									<p>I'm an Irish national living in the UK. I started out my data career in Astronomy, 
 										where I focussed on exo-planetary systems (i.e. planets around other stars). 
 										I have two Masters degrees in Astronomy, one from the University of Groningen,
-										 Netherlands, and one from the University of Warwick, UK. Observational Astronomy 
-										 is a data-rich field, which prepared me well for a career in Data Science. After 
-										 university, I went to work in the water industry in the UK as the Senior Data 
-										 Scientist, primarily building machine learning models to detect water leaks, 
-										 progressing to Head of R&D and Data Analytics where I led a team of Data Scientists 
-										 and Software Engineers to bring cutting edge ML products to the UK and international 
-										 water industries. In 2023, I began working at Liberty Global Shared Services Centre
-										 as Data Science Manager, responsible for developing end-to-end technical solutions 
-										 using GCP, educating the business on the capabilities of Data Science and ensuring 
-										 Data was being leveraged appropriately. Recently, I began working as Data Science 
-										 Manager at Asda in Leeds, UK.</p>
+										Netherlands, and one from the University of Warwick, UK. Observational Astronomy 
+										is a data-rich field, involving advanced statistics and data modelling, which fully 
+										prepared me for a career in Data Science. After university, I began my Data Science career
+										in the water industry in the UK as the Senior Data Scientist, primarily building 
+										machine learning models to detect water leaks, developing software products for our clients, and
+										progressing to Head of R&D and Data Analytics where I led a team of Data Scientists 
+										and Software Engineers to bring cutting edge ML products to the UK and international 
+										water industries. In 2023, I began working at Liberty Global Shared Services Centre
+										as Data Science Manager, responsible for developing end-to-end technical solutions 
+										using GCP, educating the business on the capabilities of Data Science and ensuring 
+										Data was being appropriately leveraged. I then progressed to working as Data Science 
+										Manager at Asda in Leeds, UK where my team and I have been building Asda's very own
+										safety stock optimisation tool, massively enhancing how Asda sets it's safety stock strategy.
+										In well controlled trials, using an advanced synthetic control technique, this model 
+										demonstrated upwards of £23m in savings for Asda. Full roll out is currently underway 
+										and estimated to be worth £44m in waste savings and availability improvements. 
+										Most recently, I've moved into the Travel sector, working as Lead Data Scientist at Jet2.com
+										where I am responsible for leading a team of Data Scientists to deliver impactful data 
+										products that enhance customer experience, contracting and drive business growth.
+										Our most recent Data Science product launch aims to optimise how Jet2 procures and 
+										allocated hotel rooms for it's customers, leading to significant cost savings 
+										and improved customer satisfaction. This product is expected to save Jet2 in excess of £12m annually once fully rolled out.
+										Now, having more than <span id="years-experience" aria-live="polite"></span> years experience in the industry, 
+										I am excited to continue driving innovation and delivering value through data science.
+									</p>	
 								</div>
 							</section>
 
@@ -75,16 +101,20 @@
 							<section id="skills">
 								<div class="container">
 									<h3>Skills</h3>
-									<p>Throughout my career, I have gained experience with technical product development, whether it be a data science, machine learning, or software product, as well as working with cross functional teams to deliver business value. </p>
+									<p>Throughout my career, I have gained experience with technical product development, 
+										whether it be a data science, machine learning, or software product, as well 
+										as working with cross functional teams to deliver business value. </p>
 									<ul class="feature-icons">
 										<li class="icon solid fa-code">Python, PHP and SQL</li>
-										<li class="icon solid fa-cloud">AWS (RDS, EC2 and Elastic Beanstalk)</li>
-										<li class="icon solid fa-cloud">GCP (VertexAI, BigQuery, Cloud Run)</li>
+										<li class="icon solid fa-cloud">AWS</li>
+										<li class="icon solid fa-cloud">GCP</li>
+										<li class="icon solid fa-cloud">Azure/Azure Databricks</li>
 										<li class="icon solid fa-book">Analytical product development</li>
-										<li class="icon solid fa-users">Team Leadership</li>
+										<li class="icon solid fa-users">Team Leadership/Mentorship</li>
 										<li class="icon solid fa-handshake-o">Project Management</li>
 										<li class="icon solid fa-coffee">Communication</li>
 										<li class="icon solid fa-bolt">Agile Methodologies</li>
+										<li class="icon solid fa-bolt">CRISP-DM Ways of Working</li>
 									</ul>
 								</div>
 							</section>
@@ -93,7 +123,6 @@
 								<div class="container">
 									<h3>Additional Qualifications</h3>
 									<div class="col-6 col-12-xsmall">
-										<!-- <h5>Unordered</h5> -->
 										<ul>
 											<li>Project Management Communication, Stakeholders & Leadership from Coursera. Completed in 2023.
 												<a href="https://www.coursera.org/learn/project-management-communication-stakeholders-and-leadership?" class="text" target="_blank">(Syllabus)</a>
@@ -131,11 +160,11 @@
 									<p>Below is a list of the various machine learning, data science and data visualisation project I've been working on.</p>
 									<div class="features">
 										<article>
-											<a href="Winter_Temperature_Prediction.html" class="image" target="_blank">
-												<img src="images/pexels-pixabay-66284.jpg" alt="" />
+											<a href="projects/winter_temp_prediction/Winter_Temperature_Prediction.html" class="image" target="_blank">
+												<img src="projects/winter_temp_prediction/pexels-pixabay-66284.jpg" alt="" />
 											</a>
 											<div class="inner">
-												<a href="Winter_Temperature_Prediction.html" class="text" target="_blank">
+												<a href="projects/winter_temp_prediction/Winter_Temperature_Prediction.html" class="text" target="_blank">
 													<h4>Using ML to predict UK Winter severity</h4>
 												</a>
 												<p>Using a variety of climate index data, I attempt to predict just how cold this winter will be in the UK with machine learning and statistics.</p>
@@ -143,23 +172,23 @@
 											</div>
 										</article>
 										<article>
-											<a href="https://weather-io.com" class="image" target="_blank">
-												<img src="images/Weather IO_3.png" alt="" />
+											<a href="images/maintenance.jpg" class="image" target="_blank">
+												<img src="projects/weather_io/Weather IO_3.png" alt="" />
 											</a>
 											<div class="inner">
-												<a href="https://weather-io.com" class="text" target="_blank">
-													<h4>Weather I/O</h4>
+												<a href="images/maintenance.jpg" class="text" target="_blank">
+													<h4>Weather I/O (Down for maintenance)</h4>
 												</a>
 												<p>Weather I/O is a website I built in AWS to display UK rainfall accumulation data. Using open data from the UK Environment Agency, Weather I/O displays the geographic distribution of rainfall accumulation. After searching far and wide, I could not find any service that provided this data. So I decided to build it myself.</p>
 												<p><em>Date Posted: 17-Nov-2022</em></p>
 											</div>
 										</article>
 										<article>
-											<a href="Customer_Satisfaction_Dashboard.html" class="image" target="_blank">
-												<img src="images/pic2.jpg" alt="" />
+											<a href="projects/customer_satisfaction/Customer_Satisfaction_Dashboard.html" class="image" target="_blank">
+												<img src="projects/customer_satisfaction/pic2.jpg" alt="" />
 											</a>
 											<div class="inner">
-												<a href="Customer_Satisfaction_Dashboard.html" class="text" target="_blank">
+												<a href="projects/customer_satisfaction/Customer_Satisfaction_Dashboard.html" class="text" target="_blank">
 													<h4>Customer Satisfaction Dashboard</h4>
 												</a>
 												<p>Using data collected from Google Reviews, I examine the level of restaurant customer satisfaction across the UK using Tableau.</p>
@@ -167,11 +196,11 @@
 											</div>
 										</article>
 										<article>
-											<a href="Water_Demand_Forecasting.html" class="image" target="_blank">
-												<img src="images/pexels-pixabay-40784.jpg" alt="" />
+											<a href="projects/water_demand_forecast/Water_Demand_Forecasting.html" class="image" target="_blank">
+												<img src="projects/water_demand_forecast/pexels-pixabay-40784.jpg" alt="" />
 											</a>
 											<div class="inner">
-												<a href="Water_Demand_Forecasting.html" class="text" target="_blank">
+												<a href="projects/water_demand_forecast/Water_Demand_Forecasting.html" class="text" target="_blank">
 													<h4>Forecasting UK Water Demand</h4>
 												</a>
 												<p>Through a variety of techniques, I build a forecasting model to predict future water demand in the UK.</p>
@@ -180,7 +209,7 @@
 										</article>
 										<article>
 											<a href="https://carpriceprediction-uwngw363nq-ew.a.run.app/" class="image" target="_blank">
-												<img src="images/car_sales.jpg" alt="" />
+												<img src="projects/car_price_prediction/car_sales.jpg" alt="" />
 											</a>
 											<div class="inner">
 												<a href="https://carpriceprediction-uwngw363nq-ew.a.run.app/" class="text" target="_blank">
@@ -188,6 +217,30 @@
 												</a>
 												<p>Using GCP and a Random Forest Regressor, I built an application that can predict prices of used cars based on a variety of features.</p>
 												<p><em>Date Posted: 5-Aug-2023</em></p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/johndolan29/nb2dbpy" class="image" target="_blank">
+												<img src="projects/nb2dbpy/nb2dbpy.png" alt="" />
+											</a>
+											<div class="inner">
+												<a href="https://github.com/johndolan29/nb2dbpy" class="text" target="_blank">
+													<h4>nb2dbpy</h4>
+												</a>
+												<p>A command-line tool for converting between Databricks .py script files and .ipynb notebooks.</p>
+												<p><em>Date Posted: 6-Sept-2024</em></p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/johndolan29/job_search" class="image" target="_blank">
+												<img src="projects/job_search/job_search.png" alt="" />
+											</a>
+											<div class="inner">
+												<a href="https://github.com/johndolan29/job_search" class="text" target="_blank">
+													<h4>Automated Job Searcher</h4>
+												</a>
+												<p>An automated job scraper that uses the JobSpy library to search for specific jobs through LinkedIn, Glassdoor, Google and Indeed.</p>
+												<p><em>Date Posted: 23-Nov-2024</em></p>
 											</div>
 										</article>
 									</div>
@@ -210,338 +263,6 @@
 
 								</div>
 							</section>
-
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
-
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
-
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
-
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
-
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
-
-								</div>
-							</section>
-						-->
-
 					</div>
 
 				<!-- Footer -->
